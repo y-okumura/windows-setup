@@ -9,40 +9,40 @@ setup.batを右クリックして、「管理者として実行」する。
 setup.ps1の`$packages`および`WindowsFeatures`を参照。
 
  - PowerShell編集用
-  - windows-sdk-10.0
-  - vscode
+   - windows-sdk-10.0
+   - vscode
  - 仮想化
-  - docker-for-windows
-  - vagrant
+   - docker-for-windows
+   - vagrant
  - Java関係
-  - jdk8
-  - jdk10
-  - groovy
-  - maven
-  - NetBeans
+   - jdk8
+   - jdk10
+   - groovy
+   - maven
+   - NetBeans
  - エディタ
-  - atom
-  - SublimeText3
-  - SublimeText3.PackageControl
+   - atom
+   - SublimeText3
+   - SublimeText3.PackageControl
  - ブラウザ
-  - GoogleChrome
+   - GoogleChrome
  - GitHub
-  - github-desktop
+   - github-desktop
  - フォント
-  - sourcecodepro
+   - sourcecodepro
  - Windowsの機能
-  - Windows subsystem for linux
-  - Hyper-v
-  - Windows Server コンテナー
+   - Windows subsystem for linux
+   - Hyper-v
+   - Windows Server コンテナー
 
 # 入れたいけどまだ入れれてないもの
 
-- フォント
- - JPAフォント
- - [Notoフォント](http://www.google.com/get/noto/help/cjk/) :  https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKjp-hinted.zip
- - ricty
-- 設定
- - Atomのフォント  
+ - フォント
+   - JPAフォント
+   - [Notoフォント](http://www.google.com/get/noto/help/cjk/) :  https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKjp-hinted.zip
+   - ricty
+ - 設定
+   - Atomのフォント  
  ~\.atom\styles.lessを書き換え
 ```less:
 atom-text-editor {
@@ -52,18 +52,18 @@ atom-workspace {
   font-family: 'Noto Sans CJK JP', meiryo;
 }
 ```
- - スクロールの向き
-   HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\HID\xxxxx\yyyyy\Device Parameters のFlipFlopWheelおよびFlipFlopHScrollを1にする。  
-   xxxxxおよびyyyyyの部分はハードウェアによって異なる。
- - 左command = ctrl
-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout に新規バイナリ値「Scancode Map」を作成し、以下の値を設定
-```
-00 00 00 00
-00 00 00 00
-02 00 00 00
-e0 5b 00 1d
-00 00 00 00
-```
+   - スクロールの向き
+     HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\HID\xxxxx\yyyyy\Device Parameters のFlipFlopWheelおよびFlipFlopHScrollを1にする。  
+     xxxxxおよびyyyyyの部分はハードウェアによって異なる。
+   - 左command = ctrl
+     HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout に新規バイナリ値「Scancode Map」を作成し、以下の値を 設定
+     ```
+     00 00 00 00
+     00 00 00 00
+     02 00 00 00
+     e0 5b 00 1d
+     00 00 00 00
+     ```
 
 # たぶんスクリプトではできないもの
 
@@ -73,12 +73,12 @@ BIOSのマシンの場合、PCの起動時（再起動時にはうまくでき�
 
 IntelのCPUの場合:
 
-- Advanced > CPU Configuration >  Execute Disable Bit > [Enabled]   
-- Advanced > CPU Configuration >  Intel(R) VirtualizationTechnology > [Enabled]
+ - Advanced > CPU Configuration >  Execute Disable Bit > [Enabled]   
+ - Advanced > CPU Configuration >  Intel(R) VirtualizationTechnology > [Enabled]
 
 AMD系のCPUの場合：
 
-- Advanced > CPU Configuration >　SVM > [Enabled]
+ - Advanced > CPU Configuration >　SVM > [Enabled]
 
 に設定する。
 
