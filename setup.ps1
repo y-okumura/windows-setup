@@ -1,5 +1,6 @@
-$packages = @(
+﻿$packages = @(
   "windows-sdk-10.0";
+  "vscode";
   "docker-for-windows";
   "vagrant";
   "jdk8";
@@ -13,7 +14,7 @@ $packages = @(
   "GoogleChrome";
   "github-desktop";
   "sourcecodepro";
-)  -join ' '
+)
 
 $WindowsFeatures = @(
     'Microsoft-Windows-Subsystem-Linux';
@@ -27,7 +28,7 @@ if (-not $Env:Path.Contains("chocolatey\bin")) {
 }
 
 # chocolateyのパッケージをインストール
-cinst -y $packages
+cinst $packages -y
 
 # DisabledなFeatureを抽出してEnableに設定し
 $EnableResults = $WindowsFeatures |
@@ -37,5 +38,8 @@ $EnableResults = $WindowsFeatures |
 
 # 再起動が必要であれば再起動する
 if ($EnableResults.ForEach({$_.RestartNeeded}) -contains $True) {
+    Write-Host "インストールが終了しました。再起動します。"
+    pause
+
     Restart-Computer
 }
