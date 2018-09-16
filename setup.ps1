@@ -14,6 +14,8 @@
   "GoogleChrome";
   "github-desktop";
   "sourcecodepro";
+  "noto";
+  "fonts-ricty-diminished";
 )
 
 $WindowsFeatures = @(

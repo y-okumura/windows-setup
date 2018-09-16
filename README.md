@@ -30,6 +30,8 @@ setup.ps1の`$packages`および`WindowsFeatures`を参照。
    - github-desktop
  - フォント
    - sourcecodepro
+   - Notoフォント
+   - ricty diminished
  - Windowsの機能
    - Windows subsystem for linux
    - Hyper-v
@@ -38,9 +40,7 @@ setup.ps1の`$packages`および`WindowsFeatures`を参照。
 # 入れたいけどまだ入れれてないもの
 
  - フォント
-   - JPAフォント
-   - [Notoフォント](http://www.google.com/get/noto/help/cjk/) :  https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKjp-hinted.zip
-   - ricty
+   - JPAフォント(もういいかな…)
  - 設定
    - Atomのフォント  
  ~\.atom\styles.lessを書き換え
