@@ -1,4 +1,5 @@
-﻿$packages = @(
+$packages = @(
+  "windows-sdk-10.0";
   "docker-for-windows";
   "vagrant";
   "jdk8";
