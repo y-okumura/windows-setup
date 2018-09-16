@@ -8,40 +8,41 @@ setup.batを右クリックして、「管理者として実行」する。
 
 setup.ps1の`$packages`および`WindowsFeatures`を参照。
 
- * PowerShell編集用
-  * windows-sdk-10.0
-  * vscode
- * 仮想化
-  * docker-for-windows
-  * vagrant
- * Java関係
-  * jdk8
-  * jdk10
-  * groovy
-  * maven
-  * NetBeans
- * エディタ
-  * atom
-  * SublimeText3
-  * SublimeText3.PackageControl
- * ブラウザ
-  * GoogleChrome
- * GitHub
-  * github-desktop
- * フォント
-  * sourcecodepro
-* Windowsの機能
-  * Windows subsystem for linux
-  * Hyper-v
+ - PowerShell編集用
+  - windows-sdk-10.0
+  - vscode
+ - 仮想化
+  - docker-for-windows
+  - vagrant
+ - Java関係
+  - jdk8
+  - jdk10
+  - groovy
+  - maven
+  - NetBeans
+ - エディタ
+  - atom
+  - SublimeText3
+  - SublimeText3.PackageControl
+ - ブラウザ
+  - GoogleChrome
+ - GitHub
+  - github-desktop
+ - フォント
+  - sourcecodepro
+ - Windowsの機能
+  - Windows subsystem for linux
+  - Hyper-v
+  - Windows Server コンテナー
 
 # 入れたいけどまだ入れれてないもの
 
-* フォント
- * JPAフォント
- * [Notoフォント](http://www.google.com/get/noto/help/cjk/) :  https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKjp-hinted.zip
- * ricty
-* 設定
- * Atomのフォント  
+- フォント
+ - JPAフォント
+ - [Notoフォント](http://www.google.com/get/noto/help/cjk/) :  https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKjp-hinted.zip
+ - ricty
+- 設定
+ - Atomのフォント  
  ~\.atom\styles.lessを書き換え
 ```less:
 atom-text-editor {
@@ -51,10 +52,10 @@ atom-workspace {
   font-family: 'Noto Sans CJK JP', meiryo;
 }
 ```
- * スクロールの向き
+ - スクロールの向き
    HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\HID\xxxxx\yyyyy\Device Parameters のFlipFlopWheelおよびFlipFlopHScrollを1にする。  
    xxxxxおよびyyyyyの部分はハードウェアによって異なる。
- * 左command = ctrl
+ - 左command = ctrl
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout に新規バイナリ値「Scancode Map」を作成し、以下の値を設定
 ```
 00 00 00 00

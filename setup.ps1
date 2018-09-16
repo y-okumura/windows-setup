@@ -19,6 +19,7 @@
 $WindowsFeatures = @(
     'Microsoft-Windows-Subsystem-Linux';
     'Microsoft-Hyper-V';
+    'Containers';
 )
 
 # chocolateyがインストールされていなければインストール
