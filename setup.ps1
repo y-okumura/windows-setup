@@ -28,16 +28,13 @@ if (-not $Env:Path.Contains("chocolatey\bin")) {
 # chocolateyのパッケージをインストール
 cinst -y $packages
 
-# DisabledなFeatureを抽出して
-$DisabledFeatures = $WindowsFeatures |
+# DisabledなFeatureを抽出してEnableに設定し
+$EnableResults = $WindowsFeatures |
   % { Get-WindowsOptionalFeature -Online -FeatureName $_ } |
-  ? { $_.State -eq 'Disabled'}
+  ? { $_.State -eq 'Disabled'} |
+  % { Enable-WindowsOptionalFeature -Online -NoRestart -FeatureName $_.FeatureName -All }
 
-# Enableに設定し
-$DisabledFeatures |
-    % { Enable-WindowsOptionalFeature -Online -NoRestart -FeatureName $_.FeatureName -All }
-
-# 再起動が必要なFeatureがあれば再起動する
-if ($DisabledFeatures.ForEach({$_.RestartRequired}) -contains 'Possible') {
+# 再起動が必要であれば再起動する
+if ($EnableResults.ForEach({$_.RestartNeeded}) -contains $True) {
     Restart-Computer
 }
