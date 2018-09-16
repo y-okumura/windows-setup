@@ -90,7 +90,7 @@ AMD系のCPUの場合：
 
 （以下MacにUEFIでwindowsを入れるためのメモ）  
 - BOOTCAMPでパーティションを作成しない。MBRが作成されてしまいEFIとならない。
-- Disk Utilityでwindows用のフォーマット（FAT32およびおそらくExFATも）のパーティションを作成してもMBRが作成されてしまう。
+- Disk Utilityでwindows用のフォーマット（FAT32 ~~およびおそらくExFATも~~ExFATは大丈夫だった模様 ）のパーティションを作成してもMBRが作成されてしまう。
 - インストーラをEFIで起動しないとMBRを見に行こうとしてしまってうまくインストールができない。  
 
 以上から、
