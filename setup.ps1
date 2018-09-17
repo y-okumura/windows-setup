@@ -12,6 +12,7 @@
   "SublimeText3";
   "SublimeText3.PackageControl";
   "GoogleChrome";
+  "git";
   "github-desktop";
   "sourcecodepro";
   "noto";
@@ -26,7 +27,7 @@ $WindowsFeatures = @(
 
 # chocolateyがインストールされていなければインストール
 if (-not $Env:Path.Contains("chocolatey\bin")) {
-    iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))
+    Invoke-Expression ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))
     $Env:Path += ";${Env:AllUsersProfile}\chocolatey\bin"
 }
 
@@ -34,10 +35,13 @@ if (-not $Env:Path.Contains("chocolatey\bin")) {
 cinst $packages -y
 
 # DisabledなFeatureを抽出してEnableに設定し
-$EnableResults = $WindowsFeatures |
-  % { Get-WindowsOptionalFeature -Online -FeatureName $_ } |
-  ? { $_.State -eq 'Disabled'} |
-  % { Enable-WindowsOptionalFeature -Online -NoRestart -FeatureName $_.FeatureName -All }
+$EnableResults = $WindowsFeatures.ForEach({
+    Get-WindowsOptionalFeature -Online -FeatureName $_
+}).Where({
+    $_.State -eq 'Disabled'
+}).ForEach({
+    Enable-WindowsOptionalFeature -Online -NoRestart -FeatureName $_.FeatureName -All
+})
 
 # 再起動が必要であれば再起動する
 if ($EnableResults.ForEach({$_.RestartNeeded}) -contains $True) {

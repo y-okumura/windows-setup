@@ -27,6 +27,7 @@ setup.ps1の`$packages`および`WindowsFeatures`を参照。
  - ブラウザ
    - GoogleChrome
  - GitHub
+   - git
    - github-desktop
  - フォント
    - sourcecodepro
