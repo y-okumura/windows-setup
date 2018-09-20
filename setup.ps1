@@ -14,6 +14,7 @@
   "GoogleChrome";
   "git";
   "github-desktop";
+  "gitextensions";
   "sourcecodepro";
   "noto";
   "fonts-ricty-diminished";

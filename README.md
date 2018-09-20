@@ -26,9 +26,10 @@ setup.ps1の`$packages`および`WindowsFeatures`を参照。
    - SublimeText3.PackageControl
  - ブラウザ
    - GoogleChrome
- - GitHub
+ - Git
    - git
    - github-desktop
+   - gitextensions
  - フォント
    - sourcecodepro
    - Notoフォント
