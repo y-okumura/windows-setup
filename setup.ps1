@@ -15,6 +15,7 @@
   "git";
   "github-desktop";
   "gitextensions";
+  "kdiff3";
   "sourcecodepro";
   "noto";
   "fonts-ricty-diminished";
