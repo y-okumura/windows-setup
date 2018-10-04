@@ -2,7 +2,8 @@
 
 ## インストール方法
 
-setup.batをダウンロードし、右クリックして「管理者として実行」する。
+[zip](https://github.com/y-okumura/windows-setup/archive/master.zip)をダウンロードして解凍し、
+setup.batを右クリックして「管理者として実行」する。
 
 ## 入れるもの
 
