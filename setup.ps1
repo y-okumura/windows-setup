@@ -1,11 +1,14 @@
 ﻿$packages = @(
+  "dropbox";
+  "libreoffice";
+  "slack";
   "windows-sdk-10.0";
   "vscode";
   "docker-for-windows";
   "docker-kitematic";
   "vagrant";
   "jdk8";
-  "jdk10";
+  "openjdk";
   "groovy";
   "maven";
   "NetBeans";
