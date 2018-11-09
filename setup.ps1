@@ -1,5 +1,6 @@
 ﻿$packages = @(
   "dropbox";
+  "googledrive";
   "libreoffice";
   "slack";
   "windows-sdk-10.0";
