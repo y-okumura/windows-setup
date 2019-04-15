@@ -3,7 +3,7 @@
   "googledrive";
   "libreoffice";
   "slack";
-  "windows-sdk-10.0";
+  "windows-sdk-10";
   "vscode";
   "docker-for-windows";
   "docker-kitematic";
